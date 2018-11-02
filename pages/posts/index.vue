@@ -1,11 +1,17 @@
 <template>
-  <p>{{ posts }}</p>
+  <div>
+    <Post/>
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Post from '@/components/Post'
 
 export default {
+  components: {
+    Post
+  },
   async asyncData () {
     let response = await axios.get('https://jsonplaceholder.typicode.com/posts')
 
