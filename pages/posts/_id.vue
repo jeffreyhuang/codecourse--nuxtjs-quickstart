@@ -22,11 +22,17 @@ export default {
       title: this.post.title
     }
   },
-  async asyncData ({ params }) {
-    let response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+  async asyncData ({ params, error }) {
+    try {
+      let response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
 
-    return {
-      post: response.data
+      return {
+        post: response.data
+      }
+    } catch (e) {
+      error({
+        statusCode: e.response.status
+      })
     }
   }
 }
