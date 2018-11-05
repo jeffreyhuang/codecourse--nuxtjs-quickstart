@@ -12,6 +12,7 @@ export default {
   components: {
     Post
   },
+  layout: 'posts',
   head: {
     title: 'Posts'
   },
