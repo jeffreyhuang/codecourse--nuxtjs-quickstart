@@ -12,6 +12,9 @@ export default {
   components: {
     Post
   },
+  head: {
+    title: 'Posts'
+  },
   async asyncData () {
     let response = await axios.get('https://jsonplaceholder.typicode.com/posts')
 
