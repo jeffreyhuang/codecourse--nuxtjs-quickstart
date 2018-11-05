@@ -17,6 +17,11 @@ export default {
       post: null
     }
   },
+  head () {
+    return {
+      title: this.post.title
+    }
+  },
   async asyncData ({ params }) {
     let response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
 
