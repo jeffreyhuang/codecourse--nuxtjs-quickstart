@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h3>{{ posts.length }} {{ pluralize('post', posts.length )}}</h3>
+
     <Post v-for="post in posts" :key="post.id" :post="post" />
   </div>
 </template>
