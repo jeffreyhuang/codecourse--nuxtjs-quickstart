@@ -6,8 +6,20 @@
       </div>
 
       <div class="col-md-4">
-        Sidebar
+        <no-ssr>
+          <v-select v-model="selected" placeholder="Select category" :options="['foo','bar']"></v-select>
+        </no-ssr>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      selected: null
+    }
+  }
+}
+</script>
