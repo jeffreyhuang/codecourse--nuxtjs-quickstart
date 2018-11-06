@@ -36,7 +36,11 @@ module.exports = {
   */
   plugins: [
     '@/plugins/mixins/pluralize',
-    '@/plugins/scrollTo'
+    '@/plugins/scrollTo',
+    {
+      src: '@/plugins/vueSelect',
+      ssr: false
+    }
   ],
 
   /*
